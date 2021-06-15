@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SPIN FLOWER</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+ 
+<center><p><button  id="button" onclick="myMove()"> TOUCH ME </button></p>
+</center>
+
+<center><div class=container>
+	  <div id="animate">
+	  <div class="flower"></div>
+	  <div class="flower"></div>
+	  <div class="flower"></div>
+	  <div class="flower"></div>
+	  <div class="flower"></div>
+	  <div class="flower"></div>
+	  <div class="flower"></div>
+	  <div class="flower"></div>
+	  <div class="flower"></div>
+	  </div>
+</div></center>
+
+<center>
+<div class="caule"></div>
+</center>
+
+<script>
+function myMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  let pos = 55;
+  clearInterval(id);
+  id = setInterval(frame,5);
+  function frame() {
+    if (pos == 400){
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.center = pos + "px";   
+    }
+  }
+}
+</script>
+
+
+</body>
+</html>
